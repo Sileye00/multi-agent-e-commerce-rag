@@ -4,7 +4,7 @@
 
 I implemented a system that routes e-commerce support requests among specialist agents, retrieves policy information from three Knowledge Bases in parallel, and stores workflow findings in DynamoDB. The application was deployed to Amazon Bedrock AgentCore Runtime and passed the supplied project checks with **120/120 points**.
 
-NovaMart is the fictional retailer used in the course starter. This repository is a portfolio case study with architecture, evidence, and lessons learned. The completed source was submitted privately to Udacity; this public repository does not redistribute the modified course files.
+NovaMart is the fictional retailer used in the course starter. This repository contains my completed project implementation, the supporting project files, and a portfolio case study with architecture, evidence, and lessons learned. It includes only the capstone project, not the rest of the course. Deployment-specific settings are excluded; `.env.example` documents the required configuration.
 
 ## The problem
 
@@ -109,7 +109,21 @@ Built from the [Udacity AWS Agentic AI classroom starter](https://github.com/uda
 
 Udacity supplied the foundation template, seed data, configuration, tests, retrieval helper, tracing/logging utilities, and AgentCore CLI wrapper. I completed the assignment TODOs, provisioned the Knowledge Bases, deployed the application, ran the validations, and captured the evidence. This is an educational implementation, not an independently authored replacement for those supplied components.
 
-The [upstream license](https://github.com/udacity/cd14764-aws-agentic-c3-classroom/blob/main/LICENSE.md) is marked CC BY-NC-ND 4.0. Refer to the upstream repository for its source and terms. No license grant for Udacity's course code is made by this case study.
+The original [Udacity license](LICENSE.md) is retained. The project is based on the upstream educational material; attribution and the upstream terms continue to apply. This repository does not relicense the supplied course material.
+
+## Project files
+
+| Path | Contents |
+|---|---|
+| `src/agent_orchestrator.py` | Completed agent builders, routing tools, guardrail, deployment, memory, and observability TODOs |
+| `src/` support modules | Supplied retrieval, tracing, CLI, terminal utilities, and demo |
+| `infrastructure/` | Foundation template, seed script, and cleanup utility |
+| `tests/test_agent.py` | Original project checks, unchanged |
+| `config.py` | Original project configuration |
+| `.env.example` | Configuration template with empty deployment IDs |
+| `screenshots/` | Test score and trace evidence |
+
+For the original setup walkthrough, see the [official project README](https://github.com/udacity/cd14764-aws-agentic-c3-classroom/blob/main/project/starter/README.md). The implementation TODOs are complete in this version. Create your own `.env` from `.env.example`, provision your own foundation and Knowledge Bases, and use your own AWS credentials before running live commands.
 
 ## Author
 
